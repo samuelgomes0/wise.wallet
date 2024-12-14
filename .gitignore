@@ -1,0 +1,93 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+build/
+
+# Tailwind CSS
+.tailwind/
+
+# Typescript
+*.tsbuildinfo
+
+# Testing
+coverage/
+.nyc_output/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Prisma
+prisma/migrations/
+prisma/generated/
+
+# Fastify cache
+.fastify/
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# MacOS
+.DS_Store
+
+# Linux
+*.un~
+
+# Windows
+Thumbs.db
+
+# Optional npm cache directory
+.npm
+
+# Yarn Integrity file
+.yarn-integrity
+
+# yarn v2+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Parcel cache
+.cache/
+
+# Storybook
+storybook-static/
+
+# Static files
+*.log
+*.lock
+
+# Build artifacts
+dist/
+*.js.map
+*.d.ts.map
+
+# Generated files
+*.d.ts
+
+# Shadcn
+components/ui/
+
+# Temp files
+*.tmp
+*.temp

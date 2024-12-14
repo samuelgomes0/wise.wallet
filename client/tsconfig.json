@@ -1,27 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "target": "ES2020", // Define o padrão JavaScript gerado para navegadores modernos
+    "lib": ["DOM", "DOM.Iterable", "ES2020"], // Bibliotecas para web e ES2020
+    "allowJs": true, // Permite importar arquivos JavaScript
+    "skipLibCheck": true, // Ignora a verificação de tipos de bibliotecas (melhora a velocidade)
+    "strict": true, // Ativa verificações rigorosas de tipo
+    "forceConsistentCasingInFileNames": true, // Garante consistência em nomes de arquivos
+    "noEmit": true, // Impede a emissão de arquivos JavaScript
+    "esModuleInterop": true, // Melhora compatibilidade com módulos CommonJS
+    "module": "ESNext", // Usa o sistema de módulos mais moderno
+    "moduleResolution": "Node", // Resolve módulos no estilo Node.js
+    "resolveJsonModule": true, // Permite a importação de arquivos JSON
+    "isolatedModules": true, // Garante que cada arquivo é tratado como um módulo independente
+    "jsx": "preserve", // Necessário para Next.js, mantém o JSX para posterior processamento
+    "incremental": true, // Habilita builds incrementais para maior performance
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"] // Atalho para resolver arquivos no diretório src
+    },
+    "baseUrl": "./", // Base para resolver paths
+    "types": ["node", "react", "next"] // Inclui tipos específicos para Next.js e React
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts", // Tipos específicos do Next.js
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": ["node_modules", ".next", "out", "build", "dist"]
 }

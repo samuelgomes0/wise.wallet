@@ -1,12 +1,32 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "outDir": "dist"
+    "target": "ES2020", // Define o padrão de JavaScript gerado
+    "lib": ["ES2020"], // Apenas bibliotecas necessárias para back-end
+    "module": "CommonJS", // Sistema de módulos compatível com Node.js
+    "moduleResolution": "Node", // Resolve módulos no estilo Node.js
+    "outDir": "dist", // Diretório de saída dos arquivos compilados
+    "rootDir": "./src", // Diretório raiz do código-fonte
+    "strict": true, // Ativa verificações rigorosas de tipo
+    "esModuleInterop": true, // Suporte a módulos CommonJS/ESModules
+    "resolveJsonModule": true, // Permite a importação de arquivos JSON
+    "skipLibCheck": true, // Ignora verificação de tipos de bibliotecas (melhora a velocidade)
+    "forceConsistentCasingInFileNames": true, // Garante consistência em nomes de arquivos
+    "typeRoots": ["./node_modules/@types"], // Diretório de tipos para Node.js e dependências
+    "incremental": true, // Ativa builds incrementais para maior performance
+    "emitDecoratorMetadata": true, // Necessário para decoradores (ex.: classe Prisma)
+    "experimentalDecorators": true, // Habilita decoradores experimentais
+    "baseUrl": ".", // Base para paths relativos
+    "paths": {
+      "@/*": ["src/*"] // Atalho para resolver arquivos no diretório src
+    }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts" // Inclui todos os arquivos TypeScript dentro da pasta src
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts", // Exclui arquivos de teste, se necessário
+    "coverage" // Exclui relatórios de cobertura de testes
+  ]
 }
